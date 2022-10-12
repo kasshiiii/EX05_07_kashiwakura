@@ -23,5 +23,8 @@ int main()
 			cout << "宅急便では送れません" << endl;
 		}
 	}
+	//確認のため停止
+	int e;
+	cin >> e;
 	return 0;
 }
