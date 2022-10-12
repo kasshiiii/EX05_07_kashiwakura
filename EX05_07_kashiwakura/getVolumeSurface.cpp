@@ -7,9 +7,10 @@ void getVolumeSurface(BOX* box) {
 }
 
 bool isSendable(BOX* box) {
+	const int criterionPackSizeCount = 8;
 	double criterionPackSize[8] = { 60,80,100,120,140,160,180,200 };
 	double baggageSize = box->x + box->y + box->z;
-	for (int i = 0; i < sizeof(criterionPackSize) / sizeof(criterionPackSize[0]); i++) {
+	for (int i = 0; i < criterionPackSizeCount; i++) {
 		if (baggageSize <= criterionPackSize[i]) {
 			box->packSize = criterionPackSize[i];
 			return true;
